@@ -126,7 +126,7 @@ public class GPTActivity extends AppCompatActivity {
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization", "Bearer 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")
+                .header("Authorization", "Bearer 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")
                 .post(body)
                 .build();
 
