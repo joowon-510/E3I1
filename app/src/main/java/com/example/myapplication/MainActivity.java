@@ -3,8 +3,10 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
@@ -15,13 +17,15 @@ import android.content.Intent;
 public class MainActivity extends AppCompatActivity {
 
     //버튼변수선언
-    private ImageButton menuButton, alarmButton, settingsButton;
-    private Button myButton,analyButton, communityButton, calendarButton, dietButton, workoutButton;
+    private ImageButton menuButton,alarmButton, settingsButton;
+    private ImageView myButton,calendarButton;
+    private Button analyButton, communityButton,  dietButton, workoutButton;
     private UserDAO mUserDao;
 
 
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

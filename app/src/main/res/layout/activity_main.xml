@@ -15,12 +15,13 @@
 
     <ImageButton
         android:id="@+id/menu_button"
-        android:layout_width="46dp"
+        android:layout_width="70dp"
         android:layout_height="74dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#FF914D"
+        android:contentDescription="메뉴 버튼"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_menu"
-        android:backgroundTint="#FF914D"
         app:layout_constraintEnd_toStartOf="@+id/settings_button"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,110 +39,202 @@
 
     <ImageButton
         android:id="@+id/settings_button"
-        android:layout_width="46dp"
+        android:layout_width="60dp"
         android:layout_height="74dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ic_settings"
+        android:src="@drawable/setting_icon"
         android:backgroundTint="#FF914D"
+        android:contentDescription="설정 버튼"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.7" />
 
-    <Button
-    android:id="@+id/communityBtn"
-    android:layout_width="190dp"
-    android:layout_height="120dp"
-    android:layout_weight="10"
-    android:text="자유게시판"
-    android:textStyle="bold"
-    android:textSize="25dp"
-    android:textColor="@color/black"
-    android:backgroundTint="#9A948C"
-    android:layout_marginTop="150dp"
-    android:layout_marginEnd="215dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_analysis"
-        android:layout_width="190dp"
-        android:layout_height="120dp"
-        android:layout_weight="10"
-        android:text="PH운동 추천"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:backgroundTint="#9A948C"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="10dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
 
-    <Button
-        android:id="@+id/button_my"
-        android:layout_width="190dp"
-        android:layout_height="120dp"
-        android:layout_weight="10"
-        android:text="인바디 등록"
-        android:textSize="25dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
 
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:backgroundTint="#9A948C"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/free_postt" />
 
-    <Button
-        android:id="@+id/calendar_Button"
-        android:layout_width="190dp"
-        android:layout_height="120dp"
-        android:layout_weight="10"
-        android:text="캘린더"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:backgroundTint="#9A948C"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="215dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/communityBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자유게시판"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@null" />
 
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/recom_exer"/>
+
+            <Button
+                android:id="@+id/button_workout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="운동 지침서"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:layout_marginBottom="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/diet_icon"/>
+            <Button
+                android:id="@+id/button_diet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="식단백과"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"
+                android:background="@null"
+                android:layout_marginEnd="10dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+
+            <Button
+                android:id="@+id/button_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PH운동 추천"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:background="@null"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:src="@drawable/exercise"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom_buttons_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         android:weightSum="2"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <Button
-            android:id="@+id/button_workout"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="운동"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:backgroundTint="#9A948C"/>
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/calendar_Button"
+                android:src="@drawable/calendar"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:contentDescription="캘린더 버튼" />
 
+            <TextView
+                android:id="@+id/calendar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="     calendar"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
 
-        <Button
-            android:id="@+id/button_diet"
+        </LinearLayout>
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="식단"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:backgroundTint="#9A948C"/>
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/button_my"
+                android:src="@drawable/register_inbody"
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:contentDescription="inbody 버튼" />
+
+
+            <TextView
+                android:id="@+id/button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="My Inbody"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:ignore="TextSizeCheck" />
+
+        </LinearLayout>
+
+
+
+
+
 
 
     </LinearLayout>
